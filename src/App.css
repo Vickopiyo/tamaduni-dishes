@@ -3,6 +3,9 @@
   margin: 0;
   color: white;
 }
+.header{
+margin-left: 30px;
+}
 nav{
   display: flex;
   justify-content: center;
@@ -27,7 +30,7 @@ a:hover{
 .app{
   background: url("./images/bg.jpg") center center ;
   background-size: cover;
-  height: 100vh;
+  height: 140vh;
   background-repeat:no-repeat;
 }
 .banner{
@@ -59,6 +62,9 @@ button:hover{
   background-color: rgb(173, 104, 13);
   cursor: pointer;
 }
+.suggest-food{
+  text-align: center;
+}
 .food-card{
   padding: 10px;
 
@@ -68,6 +74,7 @@ button:hover{
   justify-content: center;
   align-items: center;
   flex-wrap:wrap;
+  margin-bottom: 40px;
 
 }
 .aboutus-description{
@@ -79,14 +86,43 @@ button:hover{
 }
 .twitter{
   font-size: 1.8rem;
+  margin: 20px;
+  cursor: pointer;
 }
 .facebook{
   font-size: 1.8rem;
+  margin: 20px;
+  cursor: pointer;
 }
 .instagram{
   font-size: 1.8rem;
+  margin: 20px;
+  cursor: pointer;
+}
+.twitter:hover{
+  color:rgb(173, 104, 13) ;
+}
+.facebook:hover{
+  color:rgb(173, 104, 13) ;
+}
+.instagram:hover{
+  color:rgb(173, 104, 13) ;
 }
 
 footer{
   text-align: center;
+}
+
+
+.discount-desc{
+  font-size: 2rem;
+
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+
 }

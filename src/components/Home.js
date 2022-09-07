@@ -12,6 +12,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div className="home_section">
+      <h1 className="header">Tamaduni Dishes</h1>
         <nav>
             <Link to="">Home</Link>
             <Link to="about">About Us</Link>
@@ -19,6 +20,7 @@ const Home = () => {
             <Link to="contacts">Contacts</Link>
         </nav>
        <p className="banner">Get Started with our delicious meals</p>
+       <div className="suggest-food"><button>Suggest A Meal</button></div>
        <div className="food-section">
         <div className="food-card">
           <img  src={pilau} alt="pilau"/>
@@ -63,6 +65,7 @@ const Home = () => {
         <FaTwitter className="twitter" />
         <FaFacebook className="facebook" />
         <FaInstagram className="instagram" />
+        <p>Tamaduni dishes | All rights reserved 2022</p>
        </footer>
 
        
