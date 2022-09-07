@@ -7,5 +7,4 @@ const Offers = () => {
     </div>
   )
 }
-
-export default Offers
+export default Offers;
