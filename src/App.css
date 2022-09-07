@@ -1,0 +1,92 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  color: white;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  
+}
+nav a{
+  list-style: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+a:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.app{
+  background: url("./images/bg.jpg") center center ;
+  background-size: cover;
+  height: 100vh;
+  background-repeat:no-repeat;
+}
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: white;
+  font-size: 2rem;
+}
+img{
+  width: 250px;
+}
+span {
+  font-style: italic;
+}
+button{
+  outline: none;
+  border: none;
+  color: rgb(173, 104, 13);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+button:hover{
+  color: white;
+  background-color: rgb(173, 104, 13);
+  cursor: pointer;
+}
+.food-card{
+  padding: 10px;
+
+}
+.food-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+
+}
+.aboutus-description{
+  max-width:800px ;
+  margin: 0 auto;
+  padding: 60px 20px;
+  line-height: 1.6rem;
+  font-size: 1.6rem;
+}
+.twitter{
+  font-size: 1.8rem;
+}
+.facebook{
+  font-size: 1.8rem;
+}
+.instagram{
+  font-size: 1.8rem;
+}
+
+footer{
+  text-align: center;
+}
