@@ -126,3 +126,27 @@ footer{
   margin: 0 auto;
 
 }
+
+
+
+
+form.new-message {
+  display: flex;
+}
+
+form.new-message input[type="text"] {
+  flex: 1 1 auto;
+}
+
+form.new-message input[type="text"]:focus {
+  padding: 0.8rem;
+}
+
+form.new-message input[type="submit"] {
+  opacity: 0.8;
+}
+
+form.new-message input[type="submit"]:focus {
+  outline: none;
+  opacity: 1;
+}

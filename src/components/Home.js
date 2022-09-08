@@ -8,6 +8,7 @@ import pilau from "../images/pilau.jpg"
 import mkwaju from "../images/tamarindjuice.jpg"
 import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa"
 import React from 'react'
+import NewComment from "./NewComment"
 
 const Home = () => {
   return (
@@ -26,18 +27,21 @@ const Home = () => {
           <img  src={pilau} alt="pilau"/>
           <h2>FoodType:Pilau</h2>
           <h2>Price : <span>Ksh 750</span></h2>
+          <NewComment />
           <button className="order-button">Order Now</button>
         </div>
         <div className="food-card">
           <img  src={kuku} alt="kuku"/>
           <h2>FoodType: kuku kienyeji</h2>
           <h2>Price : <span>Ksh 900</span></h2>
+          <NewComment />
           <button className="order-button">Order Now</button>
         </div>
         <div className="food-card">
           <img  src={lobster} alt="kuku"/>
           <h2>FoodType: Pweza</h2>
           <h2>Price : <span>Ksh 600</span></h2>
+          <NewComment />
           <button className="order-button">Order Now</button>
         </div>
         {/* <div className="food-card">
