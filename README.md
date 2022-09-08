@@ -1,29 +1,36 @@
 # Tamaduni dishes
 
 ## By: Victor Opiyo
+
 ## Screenshot
 
- ## Table of Content
- - [Description](#description)
- - [Design](#Design)
- - [Features](#features)
- - [Behaviour Driven Development](#Behaviour-Driven-Development)
- - [Requirements](#requirements)
- - [Installation Process](#installation-Process)
- - [Live Link](#Live-Link)
- - [Technology  Used](#technology-Used)
- - [Licence](#licence)
- - [Authors Info](#Authors-Info)
- ## Description
+## Table of Content
+
+-[Description](#description)
+-[Design](#Design)
+-[Features](#features)
+-[Behaviour Driven Development](#Behaviour-Driven-Development)
+-[Requirements](#requirements)
+-[Installation Process](#installation-Process)
+-[Live Link](#Live-Link)
+-[Technology  Used](#technology-Used)
+-[Licence](#licence)
+-[Authors Info](#Authors-Info)
+
+## Description
+
  Tembea Kenya is a web application which connects user to planned tours within kenya at an affordable rates.
 
 ## Features
+
 A user will be able to:
+
 1. Order various foods
 2. Write food reviews
 3. Suggest future meals to be added to menu
 
 ## Behaviour Driven Development|
+
 | Behaviour      | Input        | Output       |
 | :------------- | :----------: | -----------: |
 |  Enter your name  |   |     |
@@ -31,9 +38,11 @@ A user will be able to:
 | Enter your message or comment   |  I would like to inquire about something     |     |
 | Press Submit|     | |
 
- ###  Requirements
- * One will need access to a computing device
- * Also will need internet access
+### Requirements
+
+- One will need access to a computing device
+- Also will need internet access
+
  ### Installation Process
  ****
 * Clone to our repo : git clone https://github.com/Vickopiyo/Tamadunidishes
