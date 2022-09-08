@@ -136,10 +136,14 @@ form.new-message {
 
 form.new-message input[type="text"] {
   flex: 1 1 auto;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(173, 104, 13);
 }
 
 form.new-message input[type="text"]:focus {
-  padding: 0.8rem;
+  padding: 10px;
+  outline: none;
 }
 
 form.new-message input[type="submit"] {
