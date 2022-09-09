@@ -9,6 +9,7 @@ const Home = () => {
   const [buttonText2, setButtonText2] = useState('Order Now');
   const [buttonText3, setButtonText3] = useState('Order Now');
   const [foods,setFoods]=useState([])
+  const [reviews,setReviews]=useState([])
 
   function handleClick() {
     setButtonText('Ordered!');
@@ -28,6 +29,14 @@ const Home = () => {
        })
 
   },[])
+  useEffect(()=>{
+    fetch("http://127.0.0.1:9292/reviews")
+       .then(r => r.json())
+       .then(data =>{
+        setReviews(data)
+       })
+
+  },[])
   function handleDelete (id){
     fetch(`http://127.0.0.1:9292/foods/${id}`,{
       method: "DELETE",
@@ -38,6 +47,13 @@ const Home = () => {
       setFoods(deletion)
     })
   }
+  const comments = reviews.map(
+    review => {
+      return (
+        <p key={review.id}>{review.comment}</p>
+      )
+    }
+  )
  
   const foodCard=foods.map((food)=>{
     return(
@@ -45,6 +61,7 @@ const Home = () => {
           <img  src={food.imageurl} alt="kuku"/>
           <h2>FoodType:{food.foodtype}</h2>
           <h2>Price : <span>Ksh {food.price}</span></h2>
+          {comments}
           <NewComment />
           <button className="order-button" onClick={()=>{
             handleDelete(food.id)
