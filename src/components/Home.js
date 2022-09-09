@@ -1,12 +1,6 @@
 import "../App.css"
 import { Link } from "react-router-dom"
-import friednyama from "../images/friednyama.jpg"
-import kuku from "../images/kuku.jpg"
-import lobster from "../images/lobster.jpg"
-import mkunga from "../images/mkunga.jpg"
-import pilau from "../images/pilau.jpg"
-import mkwaju from "../images/tamarindjuice.jpg"
-import {FaFacebook, FaInstagram, FaOctopusDeploy, FaRegObjectUngroup, FaTwitter} from "react-icons/fa"
+import {FaFacebook, FaInstagram,  FaTwitter} from "react-icons/fa"
 import React, {useState,useEffect} from 'react'
 import NewComment from "./NewComment"
 
