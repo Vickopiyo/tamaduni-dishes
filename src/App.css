@@ -30,7 +30,7 @@ a:hover{
 .app{
   background: url("./images/bg.jpg") center center ;
   background-size: cover;
-  height: 140vh;
+  height: 180vh;
   background-repeat:no-repeat;
 }
 .banner{

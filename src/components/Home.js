@@ -28,18 +28,31 @@ const Home = () => {
        })
 
   },[])
+  function handleDelete (id){
+    fetch(`http://127.0.0.1:9292/foods/${id}`,{
+      method: "DELETE",
+    })
+    .then(r => r.json())
+    .then(() => {
+      const deletion = foods.filter(food => food.id !== id )
+      setFoods(deletion)
+    })
+  }
  
   const foodCard=foods.map((food)=>{
     return(
-      <div className="food-card">
+      <div className="food-card" key={food.id}>
           <img  src={food.imageurl} alt="kuku"/>
           <h2>FoodType:{food.foodtype}</h2>
           <h2>Price : <span>Ksh {food.price}</span></h2>
           <NewComment />
-          <button className="order-button" onClick={handleClick2}>{buttonText2}</button>
+          <button className="order-button" onClick={()=>{
+            handleDelete(food.id)
+          }}>Ignore</button>
         </div>
     )
   })
+           
   return (
     <div className="home_section">
       <h1 className="header">Tamaduni Dishes</h1>
