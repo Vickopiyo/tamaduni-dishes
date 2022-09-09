@@ -6,14 +6,15 @@ import lobster from "../images/lobster.jpg"
 import mkunga from "../images/mkunga.jpg"
 import pilau from "../images/pilau.jpg"
 import mkwaju from "../images/tamarindjuice.jpg"
-import {FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa"
-import React, {useState} from 'react'
+import {FaFacebook, FaInstagram, FaOctopusDeploy, FaRegObjectUngroup, FaTwitter} from "react-icons/fa"
+import React, {useState,useEffect} from 'react'
 import NewComment from "./NewComment"
 
 const Home = () => {
   const [buttonText, setButtonText] = useState('Order Now');
   const [buttonText2, setButtonText2] = useState('Order Now');
   const [buttonText3, setButtonText3] = useState('Order Now');
+  const [foods,setFoods]=useState([])
 
   function handleClick() {
     setButtonText('Ordered!');
@@ -24,6 +25,27 @@ const Home = () => {
   function handleClick3() {
     setButtonText3('Ordered!');
   }
+
+  useEffect(()=>{
+    fetch("http://127.0.0.1:9292/foods")
+       .then(r => r.json())
+       .then(data =>{
+        setFoods(data)
+       })
+
+  },[])
+ 
+  const foodCard=foods.map((food)=>{
+    return(
+      <div className="food-card">
+          <img  src={food.imageurl} alt="kuku"/>
+          <h2>FoodType:{food.foodtype}</h2>
+          <h2>Price : <span>Ksh {food.price}</span></h2>
+          <NewComment />
+          <button className="order-button" onClick={handleClick2}>{buttonText2}</button>
+        </div>
+    )
+  })
   return (
     <div className="home_section">
       <h1 className="header">Tamaduni Dishes</h1>
@@ -36,45 +58,7 @@ const Home = () => {
        <p className="banner">Get Started with our delicious meals</p>
        <div className="suggest-food"><button>Suggest A Meal</button></div>
        <div className="food-section">
-        <div className="food-card">
-          <img  src={pilau} alt="pilau"/>
-          <h2>FoodType:Pilau</h2>
-          <h2>Price : <span>Ksh 750</span></h2>
-          <NewComment />
-          <button className="order-button" onClick={handleClick}>{buttonText}</button>
-        </div>
-        <div className="food-card">
-          <img  src={kuku} alt="kuku"/>
-          <h2>FoodType: kuku kienyeji</h2>
-          <h2>Price : <span>Ksh 900</span></h2>
-          <NewComment />
-          <button className="order-button" onClick={handleClick2}>{buttonText2}</button>
-        </div>
-        <div className="food-card">
-          <img  src={lobster} alt="kuku"/>
-          <h2>FoodType: Pweza</h2>
-          <h2>Price : <span>Ksh 600</span></h2>
-          <NewComment />
-          <button className="order-button" onClick={handleClick3}>{buttonText3}</button>
-        </div>
-        {/* <div className="food-card">
-          <img  src={mkunga} alt="mkunga"/>
-          <h2>FoodType: Mkunga</h2>
-          <h2>Price : <span>Ksh 1600</span></h2>
-          <button className="order-button">Order Now</button>
-        </div>
-        <div className="food-card">
-          <img  src={pilau} alt="pilau"/>
-          <h2>FoodType: Pilau</h2>
-          <h2>Price : <span>Ksh 450</span></h2>
-          <button className="order-button">Order Now</button>
-        </div>
-        <div className="food-card">
-          <img  src={mkwaju} alt="mkwaju"/>
-          <h2>FoodType: mkwaju</h2>
-          <h2>Price : <span>Ksh 400</span></h2>
-          <button className="order-button">Order Now</button>
-        </div> */}
+        {foodCard}
 
        </div>
        <hr />
@@ -83,9 +67,7 @@ const Home = () => {
         <FaFacebook className="facebook" />
         <FaInstagram className="instagram" />
         <p>Tamaduni dishes | All rights reserved 2022</p>
-       </footer>
-
-       
+       </footer>  
     </div>
   )
 }
