@@ -89,6 +89,9 @@ button:hover{
   margin: 20px;
   cursor: pointer;
 }
+.contacts{
+  margin: 0 auto;
+}
 .facebook{
   font-size: 1.8rem;
   margin: 20px;
@@ -117,7 +120,7 @@ footer{
 .discount-desc{
   font-size: 2rem;
 
-  height: 400px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,7 +130,16 @@ footer{
 
 }
 
+.contacts-section{
+    font-size: 1.8rem;
+    text-align: center;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    padding: 20px;
 
+}
 
 
 form.new-message {

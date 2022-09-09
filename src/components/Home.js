@@ -87,9 +87,9 @@ const Home = () => {
        </div>
        <hr />
        <footer>
-        <FaTwitter className="twitter" />
-        <FaFacebook className="facebook" />
-        <FaInstagram className="instagram" />
+            <FaTwitter className="twitter" />
+            <FaFacebook className="facebook" />
+            <FaInstagram className="instagram" />
         <p>Tamaduni dishes | All rights reserved 2022</p>
        </footer>  
     </div>
