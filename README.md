@@ -50,7 +50,7 @@ A user will be able to:
 * Open the index file from the zipped file with any browser.
  ****
 ### Live Link
-- Click this link to view the live application http://localhost:3004/
+- Click this link to view the live application https://tamaduni-dishes.vercel.app/
 ### Technology  Used
 * REACT for client side.
 * sinatra(RUBY) for server side

@@ -26,7 +26,6 @@ a:hover{
   color: black;
   cursor: pointer;
 }
-
 .app{
   background: url("./images/bg.jpg") center center ;
   background-size: cover;
