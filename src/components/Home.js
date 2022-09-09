@@ -1,6 +1,6 @@
 import "../App.css"
 import { Link } from "react-router-dom"
-import {FaFacebook, FaInstagram,  FaTwitter} from "react-icons/fa"
+import {FaFacebook, FaInstagram,  FaTwitter,FaLongArrowAltRight} from "react-icons/fa"
 import React, {useState,useEffect} from 'react'
 import NewComment from "./NewComment"
 
@@ -79,7 +79,7 @@ const Home = () => {
             <Link to="offers">Offers</Link>
             <Link to="contacts">Contacts</Link>
         </nav>
-       <p className="banner">Get Started with our delicious meals</p>
+       <p className="banner">Get Started with our delicious meals<FaLongArrowAltRight /></p>
        <div className="suggest-food"><button>Suggest A Meal</button></div>
        <div className="food-section">
         {foodCard}

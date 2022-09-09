@@ -29,7 +29,7 @@ a:hover{
 .app{
   background: url("./images/bg.jpg") center center ;
   background-size: cover;
-  height: 180vh;
+  height: 350vh;
   background-repeat:no-repeat;
 }
 .banner{
@@ -42,6 +42,7 @@ a:hover{
 }
 img{
   width: 250px;
+  border-radius: 10px;
 }
 span {
   font-style: italic;
