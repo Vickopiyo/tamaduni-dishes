@@ -22,7 +22,7 @@ const Home = () => {
   }
 
   useEffect(()=>{
-    fetch("http://127.0.0.1:9292/foods")
+    fetch("https://server-phase-3.herokuapp.com/foods")
        .then(r => r.json())
        .then(data =>{
         setFoods(data)
@@ -30,7 +30,7 @@ const Home = () => {
 
   },[])
   useEffect(()=>{
-    fetch("http://127.0.0.1:9292/reviews")
+    fetch("https://server-phase-3.herokuapp.com/reviews")
        .then(r => r.json())
        .then(data =>{
         setReviews(data)
@@ -38,7 +38,7 @@ const Home = () => {
 
   },[])
   function handleDelete (id){
-    fetch(`http://127.0.0.1:9292/foods/${id}`,{
+    fetch(`https://server-phase-3.herokuapp.com/foods/${id}`,{
       method: "DELETE",
     })
     .then(r => r.json())
